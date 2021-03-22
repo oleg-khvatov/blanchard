@@ -1,0 +1,236 @@
+.projects__container {
+  padding-top: 80px;
+}
+
+.projects__title {
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.projects__description {
+  margin: 0 0 20px 0;
+  max-width: 1080px;
+}
+
+.projects__tooltip-marker {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: var(--focus-color);
+  cursor: pointer;
+}
+
+.projects__tooltip-popup {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  right: -124px;
+  width: 264px;
+  padding: 11px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #CACACA;
+}
+
+.projects__tooltip-popup::before {
+  content: '';
+  display: none;
+  position: absolute;
+  bottom: -16px;
+  left: 47%;
+  border: 8px solid transparent;
+  border-top: 8px solid #CACACA;
+}
+
+.projects__tooltip-marker:hover > .projects__tooltip-popup,
+.projects__tooltip-marker:hover > .projects__tooltip-popup::before,
+.projects__tooltip-marker:focus > .projects__tooltip-popup,
+.projects__tooltip-marker:focus > .projects__tooltip-popup::before {
+  display: block;
+}
+
+
+.projects__link {
+  font-weight: 600;
+  color: var(--focus-color);
+  border-bottom: 1px solid transparent;
+  transition-duration: .2s;
+}
+
+.projects__link:hover {
+  border-bottom-color: var(--focus-color);
+}
+
+.projects__link:active {
+  color: var(--active-color);
+  border-bottom-color: var(--active-color);
+}
+
+.projects__partners-title {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+/*---------------------------слайдер---------------------------------*/
+.projects__slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects__swiper-container {
+  max-width: 1450px;
+  height: 150px;
+  margin: 0 10px;
+}
+
+.projects__swiper-slide {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid #CACACA;
+  background: #FFFFFF;
+  filter: grayscale(100%);
+  transition: filter .2s linear;
+  cursor: pointer;
+}
+
+.projects__swiper-slide:hover,
+.projects__swiper-slide:focus {
+  filter: grayscale(0%);
+}
+
+.projects__slide-img {
+  align-self: center;
+}
+
+.projects__swiper-button-prev,
+.projects__swiper-button-next {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  top: 80px;
+  padding-bottom: 4px;
+  border-radius: 50%;
+  background-color: #ECECEC;
+  outline: none;
+  transition-duration: .2s;
+}
+
+.projects__swiper-button-prev {
+  left: 0px;
+}
+
+.projects__swiper-button-next {
+  left: 2px;
+}
+
+.projects__swiper-button-prev:after, .swiper-container-rtl .projects__swiper-button-next:after {
+  content: url("../img/1920/left-black.svg");
+  line-height: 0;
+}
+
+.projects__swiper-button-next:after, .swiper-container-rtl .projects__swiper-button-prev:after {
+  content: url("../img/1920/right-black.svg");
+  line-height: 0;
+}
+
+.projects__swiper-button-prev:hover,
+.projects__swiper-button-next:hover {
+  background-color: var(--focus-color);
+}
+
+.projects__swiper-button-prev:focus,
+.projects__swiper-button-next:focus {
+  border: 2px solid var(--focus-color);
+}
+
+.projects__swiper-button-prev:active,
+.projects__swiper-button-next:active {
+  background-color: var(--active-color);
+  border: 2px solid #D1A9F0;
+}
+
+
+@media (max-width: 1024px) {
+  .projects__swiper-container {
+    max-width: 820px;
+    height: 128px;
+  }
+
+  .projects__swiper-button-prev,
+  .projects__swiper-button-next {
+    top: 70px;
+  }
+}
+
+@media (max-width: 850px) {
+  .projects__description {
+    padding-right: 10px;
+    margin-bottom: 26px;
+  }
+  
+  .projects__partners-title {
+    margin-bottom: 29px;
+  }
+
+  .projects__swiper-container {
+    max-width: 562px;
+    height: 106px;
+  }
+
+  .projects__swiper-button-prev, .projects__swiper-button-next {
+    top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects__container {
+    padding-top: 50px;
+  }
+
+  .projects__title {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .projects__description {
+    margin-bottom: 9px;
+    padding-right: 2px;
+  }
+
+  .projects__partners-title {
+    margin-bottom: 11px;
+    font-size: 18px;
+  }
+
+  .projects__swiper-container {
+    height: 65px;
+    min-width: 196px;
+    max-width: 300px;
+  }
+
+  .projects__swiper-button-prev,
+  .projects__swiper-button-next {
+    top: 39px;
+  }
+
+  .projects__swiper-button-prev {
+    margin-right: 7px;
+  }
+
+  .projects__swiper-button-next {
+    margin-left: 7px;
+  }
+
+  .projects__slide-img {
+    max-width: 50%;
+  }
+}

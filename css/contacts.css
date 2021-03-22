@@ -1,0 +1,270 @@
+.contacts {
+  padding-top: 80px;
+}
+
+.contacts__title-container {
+  margin-bottom: 15px;
+}
+
+.contacts__title {
+  font-weight: 400;
+}
+
+.contacts__info {
+  max-width: 100%;
+  min-height: 700px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contacts__content {
+  min-width: 35.5%;
+  min-height: 700px;
+  padding-top: 124px;
+  padding-left: calc(8% - 1px);
+  padding-right: calc(6% + 8px);
+  border: 1px solid #CACACA;
+}
+
+.contacts__name-title {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.contacts__address {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-style: normal;
+}
+
+.contacts__form {
+  margin-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contacts__form-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.contacts__input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 23px;
+  padding: 8px 24px;
+  line-height: 0;
+  border: 1px solid #333333;
+  border-radius: 100px;
+}
+
+.contacts__input::placeholder {
+  font-size: 16px;
+  line-height: 32px;
+  color: #999999;
+}
+
+.contacts__button {
+  box-sizing: border-box;
+  padding: 15px 33px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--focus-color);
+  border: 2px solid var(--focus-color);
+  border-radius: 100px;
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: color, background-color, border-color;
+  transition-duration: .2s;
+}
+
+.contacts__button:hover {
+  color: #ffffff;
+  background-color: var(--focus-color);
+}
+
+.contacts__button:active {
+  background-color: var(--active-color);
+  border-color: #D1A9F0;
+}
+
+.contacts__title-call {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.contacts__social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.contacts__social-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.contacts__social {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition-duration: .2s;
+}
+
+.contacts__social:hover,
+.contacts__social:focus,
+.contacts__social:active {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.contacts__social--whatsapp { 
+  background-image: url("../img/1920/Whatsapp-Icon.png");
+}
+
+.contacts__social--telegram {
+  background-image: url("../img/1920/Telegram_2019_Logo.png");
+}
+/*-----------------------------яндекс карта----------------------------*/
+.contacts__map {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+}
+
+[class*="ground-pane"] { /*все классы, содержащие в названии "ground-pane"*/
+  filter: grayscale(1);  /*убираем цветность*/
+}
+
+@media (max-width: 1400px) {
+  .contacts__content {
+    min-width: 47.6%;
+    padding-left: calc(5% - 2px);
+    padding-right: calc(8% + 20px);
+  }
+
+  .contacts__social-item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contacts__social-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .contacts__social--whatsapp { 
+    background-image: url("../img/1024/Whatsapp-Icon.png");
+  }
+  
+  .contacts__social--telegram {
+    background-image: url("../img/1024/Telegram_2019_Logo.png");
+  }
+}
+
+@media (max-width: 850px) {
+  .contacts__title-container {
+    margin-bottom: 16px;
+  }
+
+  .contacts__content {
+    min-width: 56%;
+    padding-left: calc(7% - 5px);
+    padding-right: calc(3% + 21px);
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .contacts__title-container {
+    margin-bottom: 12px;
+  }
+
+  .contacts__title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .contacts__content {
+    min-width: unset;
+    width: 100%;
+    padding: 0 0 0 0;
+    border: none;
+  }
+
+  .contacts__name-title {
+    padding-left: 15px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .contacts__address {
+    margin-bottom: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .contacts__map {
+    min-height: unset;
+    height: 320px;
+  }
+
+  .contacts__form {
+    margin-bottom: 0;
+    padding: 20px 15px;
+  }
+
+  .contacts__form-title {
+    font-size: 18px;
+  }
+
+  .contacts__input--tel {
+    margin-bottom: 18px;
+  }
+
+  .contacts__button {
+    padding: 10px 33px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contacts__title-call {
+    margin-bottom: 7px;
+    padding-left: 15px;
+    font-size: 18px;
+  }
+
+  .contacts__social-list {
+    padding: 0 15px;
+  }
+
+  .contacts__social-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contacts__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+}

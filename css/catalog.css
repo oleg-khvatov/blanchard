@@ -1,0 +1,417 @@
+.catalog__container {
+  padding-top: 80px;
+}
+
+.catalog__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.catalog__title {
+  margin-right: 2.45%;
+  font-weight: 400;
+}
+
+.catalog__country-list {
+  flex-basis: 27%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 5px;
+}
+
+.country__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country__item:last-child {
+  margin-right: 0;
+}
+
+.country__button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  outline: none;
+  cursor: pointer;
+  transition-property: border-color, filter;
+  transition-duration: .2s;
+}
+
+.country__button::after {
+  content: '';
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: -11px;
+  left: -11px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.country__button-is-active.country__button::after {
+  border-color:  var(--focus-color);
+}
+
+.country__button:hover { 
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.country__button:active {
+  border-color:  var(--focus-color);
+}
+
+.country__button--flag1 {
+  background-image: url("../img/1920/country1.png");
+}
+
+.country__button--flag2 {
+  background-image: url("../img/1920/country2.png");
+}
+
+.country__button--flag3 {
+  background-image: url("../img/1920/country3.png");
+}
+
+.country__button--flag4 {
+  background-image: url("../img/1920/country4.png");
+}
+
+.country__button--flag5 {
+  background-image: url("../img/1920/country5.png");
+}
+/*-------------------------------------------------------------------------*/
+
+.catalog__description {
+  margin-top: 0;
+  max-width: 68%;
+  margin-bottom: 39px;
+}
+
+.catalog__content {
+  display: flex;
+  justify-content: space-between;
+}
+/*-------------------------------------------------------------------------*/
+.catalog__biography {
+  flex-basis: 47%;
+  display: none;
+}
+
+.catalog__biography-is-active {
+  display: block;
+}
+
+.catalog__image {
+  width: 750px;
+  max-height: 470px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.catalog__article-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.catalog__text {
+  margin: 0;
+}
+
+.catalog__span {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+}
+
+.catalog__interval-list {
+  flex-basis: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__tabs {
+  display: none;
+}
+
+.catalog__tabs-is-active {
+  display: block;
+}
+
+.interval__button {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 38px 40px 42px 0;
+  border: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #cacaca;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
+  color: var(--font-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+.interval__button:first-child {
+  border-top: 1px solid #cacaca;
+}
+
+.interval__button::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  top: 28%;
+  border-radius: 50%;
+  background-color: #ECECEC;
+  transition: background-color .2s ease-in-out;
+}
+
+.interval__button::after {
+  content: '';
+  position: absolute;
+  right: 19px;
+  top: 44%;
+  width: 12px;
+  height: 12px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  transform: rotate(45deg);
+}
+
+.ui-state-active.interval__button::after {
+  top: 46%;
+  transform: rotate(225deg);
+}
+
+.interval__button:hover {
+  color: var(--focus-color);
+}
+
+.interval__button:hover::before {
+  background-color: var(--focus-color);
+}
+
+.interval__button:focus {
+  border: 1px solid #7943A4;
+}
+
+.interval__button:active {
+  color: var(--active-color);
+}
+
+.interval__button:active::before {
+  background-color: var(--active-color);
+}
+
+.artists__list {
+  max-height: 343px;
+  padding: 24px 36px 29px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--focus-color);
+  border-top: 1px solid var(--focus-color);
+}
+
+.artists__item {
+  width: fit-content;
+}
+
+.artists__button {
+  padding: 0;
+  line-height: 24px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: var(--font-color);
+  cursor: pointer;
+  transition-property: color, border-bottom-color;
+  transition-duration: .2s;
+}
+
+.artists__button:hover {
+  color: var(--focus-color);
+  border-bottom-color: var(--focus-color);
+}
+
+.artists__button:focus {
+  color: var(--focus-color);
+}
+
+
+.artists__button:active {
+  color: var(--active-color);
+  border-bottom-color: var(--active-color);
+}
+
+.artists__button-is-active {
+  color: var(--focus-color);
+}
+
+.js-focus-visible :focus:not(.focus-visible) { /*при использовании мыши*/
+  outline: none;
+}
+
+@media (max-width: 1400px) {
+  .catalog__header {
+    margin-bottom: 15px;
+  }
+
+  .catalog__title {
+    margin-right: 4.2%;
+  }
+
+  .catalog__description {
+    max-width: 100%;
+    margin-bottom: 39px;
+  }
+
+  .catalog__country-list {
+    flex-basis: 46.8%;
+    padding-top: 19px;
+  }
+
+  .artists__list {
+    max-height: 470px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .catalog__biography {
+    flex-basis: 47.3%;
+  }
+
+  .catalog__image {
+    max-height: 274px;
+  }
+
+  .catalog__interval-list {
+    flex-basis: 47.4%;
+  }
+}
+
+@media (max-width: 850px) {
+  .catalog__header {
+    margin-bottom: 16px;
+  }
+
+  .catalog__title {
+    margin-right: 5.8%;
+  }
+
+  .catalog__country-list {
+    flex-basis: 100%;
+    padding-top: 5px;
+  }
+
+  .country__item:not(:last-child) {
+    margin-right: 7.45%;
+  }
+
+  .catalog__description {
+    margin-bottom: 20px;
+  }
+
+  .catalog__content {
+    flex-direction: column-reverse;
+  }
+
+  .artists__list {
+    max-height: 343px;
+  }
+
+  .catalog__interval-list {
+    margin-bottom: 51px;
+  }
+
+  .catalog__image {
+    max-height: 419px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog__header {
+    flex-direction: column;
+  }
+
+  .catalog__title {
+    margin-right: unset;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .catalog__country-list {
+    padding-top: 11px;
+    padding-bottom: 5px;
+  }
+
+  .country__button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .country__button::after {
+    width: 44px;
+    height: 44px;
+    top: -8px;
+    left: -8px;
+  }
+
+  .catalog__description {
+    display: none;
+  }
+
+  .interval__button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .interval__button::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .interval__button::after {
+    width: 7px;
+    height: 7px;
+    right: 11px;
+  }
+
+  .artists__list {
+    max-height: unset;
+    flex-wrap: nowrap;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .catalog__image {
+    height: 181px;
+    margin-bottom: 10px;
+  }
+
+  .catalog__article-title {
+    margin-bottom: 5px;
+  }
+
+  .catalog__text {
+    padding-right: 3px;
+  }
+}
