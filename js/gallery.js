@@ -1,3 +1,7 @@
+//-----------------------Модальные Окна----------------------
+const modal = new GraphModal();
+//-----------------------------------------------------------
+
 //---------------Селект---------------
 const element = document.querySelector('#selectCustom');
 const choices = new Choices(element, {
@@ -10,15 +14,11 @@ const mySwiper1 = new Swiper('.gallery__swiper-container', {
   // Optional parameters
   // loop: true,
   resizeObserver: true,
-  speed: 500,
-                          // slidesPerView: 1, // or 'auto'
-                          // slidesPerColumn: 1,
-                          // // spaceBetween: 50,
-                          // slidesPerGroup: 1,
-  autoplay: {
-    delay: 5000, //задержка
-    disableOnInteraction: false, //после взаимодействия с пользователем продолжение автовоспроизведения
-  },
+  speed: 1500,
+  // autoplay: {
+  //   delay: 5000, //задержка
+  //   disableOnInteraction: false, //после взаимодействия с пользователем продолжение автовоспроизведения
+  // },
   
   breakpoints: {
     // when window width is >= 320px
@@ -56,4 +56,3 @@ const mySwiper1 = new Swiper('.gallery__swiper-container', {
     prevEl: '.gallery__swiper-button-prev',
   },
 });
-//----------------------------------------

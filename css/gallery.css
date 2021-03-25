@@ -135,17 +135,21 @@
   height: auto;
 }
 
-.gallery__img-link {
+.gallery__img-button {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
   line-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
 }
 
-.gallery__img-link::before {
+.gallery__img-button::before {
   position: absolute;
   content: url("../img/1920/search+.svg");
   top: 25px;
@@ -160,7 +164,7 @@
   opacity: 0;
 }
 
-.gallery__img-link::after {
+.gallery__img-button::after {
   position: absolute;
   content: '';
   left: 0;
@@ -173,9 +177,9 @@
   opacity: 0;
 }
 
-.gallery__img-link:hover::before,
-.gallery__img-link:focus::before,
-.gallery__img-link:active::after {
+.gallery__img-button:hover::before,
+.gallery__img-button:focus::before,
+.gallery__img-button:active::after {
   opacity: 1;
 }
 
@@ -234,7 +238,47 @@
   background-color: var(--active-color);
   border: 2px solid #D1A9F0;
 }
+/*------------------------------Модальные окна---------------------------------*/
+.modal__container {
+  width: 900px;
+  padding: 5px;
+  border-radius: unset;
+}
 
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content__img {
+  width: 400px;
+  height: 500px;
+}
+
+.modal-content__text {
+  width: 430px;
+  padding: 10px 35px 10px 10px;
+}
+
+.modal-content__title-artist {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-content__tile-picture {
+  margin: 0;
+}
+
+.modal-content__span {
+  font-size: 12px;
+  line-height: 16px;
+  color: #969696;
+}
+
+/*-----------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
   .gallery__img {
     max-height: 280px;

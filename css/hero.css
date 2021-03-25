@@ -3,29 +3,39 @@
 }
 
 .hero {
+  position: relative;
   width: 100%;
   min-height: 800px;
+}
+
+.hero__swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: var(--background);
-  background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg");
+  z-index: -10;
+}
+
+.hero__slide {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
   animation: back-size-animation 40s alternate linear infinite;
 }
 
-/* @keyframes back-img-animation {
-  0% {
-    background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg");
-  }
+.hero__slide--1 {
+  background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg");
+}
 
-  50% {
-    background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg");
-  }
+.hero__slide--2 {
+  background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg");
+}
 
-  100% {
-    background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
-  }
-} */
+.hero__slide--3 {
+  background-image: url("../img/1920/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
+}
 
 @keyframes back-size-animation {
   0% {
@@ -92,8 +102,16 @@
 }
 
 @media (max-width: 1400px) {
-  .hero {
+  .hero__slide--1 {
     background-image: url("../img/1024/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg");
+  }
+  
+  .hero__slide--2 {
+    background-image: url("../img/1024/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg");
+  }
+  
+  .hero__slide--3 {
+    background-image: url("../img/1024/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
   }
 }
 
@@ -122,7 +140,18 @@
 @media (max-width: 600px) {
   .hero {
     min-height: 442px;
+  }
+
+  .hero__slide--1 {
     background-image: url("../img/768/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg");
+  }
+  
+  .hero__slide--2 {
+    background-image: url("../img/768/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg");
+  }
+  
+  .hero__slide--3 {
+    background-image: url("../img/768/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
   }
 
   .hero__container {

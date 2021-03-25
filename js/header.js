@@ -23,24 +23,6 @@ buttonDesable.addEventListener('click', function() {
   buttonDesable.classList.remove('form__desable-768-is-active');
 })
 
-// window.addEventListener('click', function (e) {
-//   // if (!menu.contains(e.target) && !button.contains(e.target)) {
-//   //     // Ниже код, который нужно выполнить при срабатывании события.
-//   //     menu.classList.add('hide');
-//   // }
-//   if (headerForm.classList.contains('header__form-768')) {
-//     headerForm.classList.toggle('header__form-768');
-//   }
-//   if (formSearch.classList.contains('search-is-active')) {
-//     formSearch.classList.toggle('search-is-active');
-//   }
-//   if (buttonDesable.classList.contains('form__desable-768-is-active')) {
-//     buttonDesable.classList.toggle('form__desable-768-is-active');
-//   }
-
-// });
-
-
 
 //---------------Меню с выпадающими списками-------------
 // Закрываем выпадающее меню, если пользователь щелкает за его пределами
@@ -99,5 +81,34 @@ function elem() {
   this.classList.toggle('btn-is-active');
 }
 
-// const simpleBar = new SimpleBar(document.getElementById('myElement'));
-// simpleBar.recalculate();
+
+//---------------------Плавный Скроллинг до Якоря------------------------------------------------
+$(document).ready(function() {
+  var margin = 0; // переменная для контроля докрутки
+  $("a").click(function() { // тут пишите условия, для всех ссылок или для конкретных
+     $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top+margin+ "px" // .top+margin - ставьте минус, если хотите увеличить отступ
+     }, {
+        duration: 2000, // тут можно контролировать скорость
+        easing: "swing"
+     });
+     return false;
+  });
+});
+//--------------------------------------на чистом JS----------------------------------------------------------
+// const anchors = document.querySelectorAll('a[href*="#"]')
+
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault()
+    
+//     const blockID = anchor.getAttribute('href').substr(1)
+    
+//     document.getElementById(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start',
+//       duration: 2000
+//     })
+//   })
+// }
+//------------------------------------------------------------------------------------------------
