@@ -15,10 +15,10 @@ const mySwiper1 = new Swiper('.gallery__swiper-container', {
   // loop: true,
   resizeObserver: true,
   speed: 1500,
-  // autoplay: {
-  //   delay: 5000, //задержка
-  //   disableOnInteraction: false, //после взаимодействия с пользователем продолжение автовоспроизведения
-  // },
+  autoplay: {
+    delay: 5000, //задержка
+    disableOnInteraction: false, //после взаимодействия с пользователем продолжение автовоспроизведения
+  },
   
   breakpoints: {
     // when window width is >= 320px

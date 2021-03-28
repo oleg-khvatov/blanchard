@@ -37,30 +37,50 @@ window.addEventListener('DOMContentLoaded', function() {
       $('.interval').accordion( "refresh" ); // обновление, перезапуск плагина для пересчета аккордеона
     });
   });
-
+  //----------------------------------------------------------------------------------------------------------
   //-------------------------------------------accordion------------------------------------------------------
   $( function() {
     $( ".interval" ).accordion({
       collapsible: true,
     });
   });
-
+  //-----------------------------------------------------------------------------------------------------------
   //------------------------------------------табы художники---------------------------------------------------
   let artBtns = document.querySelectorAll('.artists__button');
     
     artBtns.forEach(function(tabsBtn) { //табы ("артисты")
-      tabsBtn.addEventListener('click', function(event) {
-
+      tabsBtn.addEventListener('click', function(event) { 
         artBtns.forEach(function(border){ //для всех кнопок-"артистов"
-          border.classList.remove('artists__button-is-active'); //удаление бордера увсех кнопок
-        });
-        this.classList.add('artists__button-is-active'); //бордер на нажатую кнопку
-
-        const path = event.currentTarget.dataset.artBtn;
-        document.querySelectorAll('.catalog__biography').forEach(function(catalogTabs){
-          catalogTabs.classList.remove('catalog__biography-is-active');
-        });
-        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__biography-is-active');
+        border.classList.remove('artists__button-is-active'); //удаление бордера увсех кнопок
       });
+      this.classList.add('artists__button-is-active'); //бордер на нажатую кнопку
+      
+      const path = event.currentTarget.dataset.artBtn;
+      document.querySelectorAll('.catalog__biography').forEach(function(catalogTabs){
+        catalogTabs.classList.remove('catalog__biography-is-active');
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__biography-is-active');
+    });
   });
+  //----------------------------------------------------------------------------------------------------------
+  //----------------------скроллинг до блока с выбранным художником на разрешении <=850px---------------------
+  if (document.documentElement.clientWidth <= 850) {
+    artBtns.forEach(function(tabs) {
+      tabs.addEventListener('click', ()=>{
+        let activeCatalog = document.querySelector('.catalog__biography-is-active');
+        activeCatalog.scrollIntoView({
+          block: "start",
+          behavior: "smooth"
+        });
+      });
+    });
+  };
+  //----------------------------------------------------------------------------------------------------------
 });
+
+
+
+
+
+
+
