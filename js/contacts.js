@@ -1,38 +1,62 @@
 window.addEventListener('DOMContentLoaded', function() {
-  var selector = document.querySelector("input[type='tel']");
-  var myMask = new Inputmask("+7 (999)-999-99-99");
+  let selector = document.querySelector("input[type='tel']");
+  let myMask = new Inputmask("+7 (999)-999-99-99");
   myMask.mask(selector);
 
-  new JustValidate('.contacts__form', {
-    rules: {
-      name: {
-        required: true,
-        minLength: 4,
-        maxLength: 25
+  let validateForms = function(selector, rules, successModal, yaGoal) {
+    new window.JustValidate(selector, {
+      rules: rules,
+      messages: { //замена дефолтных сообщений
+        name: {
+          required: 'Как вас зовут?',
+          minLength: 'Слишком короткое имя!'
+        },
+  
+        tel: {
+          required: 'Укажите ваш телефон',
+          function: 'Не корректный номер телефона'
+        },
       },
-      tel: {
-        required: true,
-        function: (name, value) => {
-          const phone = selector.inputmask.unmaskedvalue()
-          return Number(phone) && phone.length === 10
+      colorWrong: '#ff0000', //цвет сообщений валидации и бордера
+
+      submitHandler: function(form) {
+        let formData = new FormData(form); //объект, куда попадают все данные из формы
+  
+        let xhr = new XMLHttpRequest(); //запрос, аналог ajax
+  
+        xhr.onreadystatechange = function() { //проверка статуса отправки
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              console.log('Отправлено');
+            }
+          }
         }
-      },
+  
+        xhr.open('POST', 'mail.php', true); //будем отправлять запрос на mail.php методом POST
+        xhr.send(formData); //передаем данные с формы 
+  
+        form.reset(); //сброс формы после отправки
+      }
+    });
+  };
+  
+  validateForms('.contacts__form', {
+    name: {
+      required: true,
+      minLength: 4,
+      maxLength: 25
     },
 
-    messages: { //замена дефолтных сообщений
-      name: {
-        required: 'Как вас зовут?',
-        minLength: 'Слишком короткое имя!'
-      },
-
-      tel: {
-        required: 'Укажите ваш телефон',
-        function: 'Не корректный номер телефона'
-      },
+    tel: {
+      required: true,
+      function: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue()
+        return Number(phone) && phone.length === 10
+      }
     },
-
-    colorWrong: '#ff0000' //цвет сообщений валидации и бордера
-  })
+  }, '.thanks-popup', 'send goal');
+  //-----------------------------------------------------------------------------------
+  
   //------------------перенос HTML-элемента (Яндекс карта)-----------------------------
 
   let screen600 = window.matchMedia('(max-width: 600px)');

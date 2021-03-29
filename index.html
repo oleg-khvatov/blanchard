@@ -3740,10 +3740,12 @@
         <div class="contacts__content">
           <h3 class="contacts__name-title">Шоурум №2</h3>
           <address class="contacts__address">Покровский бульвар, дом 24, строение 3</address>
-          <form class="contacts__form" action="mail.php" enctype="multipart/form-data" method="POST" aria-label="Заказать звонок">
+          <form class="contacts__form" action="mail.php" method="POST" aria-label="Заказать звонок">
+            <input type="hidden" name="admin_email[]" value="smart-beloglinsk@yandex.ru">
+            <input type="hidden" name="form_subject" value="Тема письма">
             <h3 class="contacts__form-title">Заказать обратный звонок</h3>
             <input class="contacts__input" type="text" name="name" placeholder="Имя*" data-validate-field="name">
-            <input class="contacts__input contacts__input--tel" type="tel" name="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
+            <input class="contacts__input contacts__input--tel" type="tel" name="tel" placeholder="Телефон*" data-validate-field="tel">
             <button class="contacts__button" type="submit">Заказать</button>
           </form>
           <h3 class="contacts__title-call">Связаться в один клик</h3>
@@ -3822,8 +3824,8 @@
   <script src="js/graph-modal.min.js"></script>
   <script src="js/jquery-3.5.1-min.js"></script>
   <script src="js/jquery-ui-min.js"></script>
-  <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="js/focus-visible.js"></script>
   

@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
   //-----------------------------------табы Флаги----------------------------------------------------------
-  
   let countryBtns =  document.querySelectorAll('.country__button');
 
   countryBtns.forEach(function(tabsBtn) { //табы ("флаги стран")  
