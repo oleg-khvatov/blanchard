@@ -56,7 +56,6 @@
   padding-right: 2px;
   line-height: 30px;
   cursor: pointer;
-  
 }
 
 .categories__span {
@@ -327,16 +326,6 @@
     display: none;
   }
 
-  .categories__form1 {
-    display: none;
-    flex-wrap: nowrap;
-    max-height: unset;
-  }
-
-  .categories__form1-is-active {
-    display: flex;
-  }
-
   .categories__button {
     display: block;
     position: relative;
@@ -345,7 +334,6 @@
     padding-right: 15px;
     padding-top: 9px;
     padding-bottom: 11px;
-    margin-bottom: 57px;
     text-align: left;
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -368,6 +356,39 @@
   .categories__button-is-active.categories__button::after {
     transform: rotate(225deg);
   }
+
+  .categories__form1 {
+    flex-wrap: nowrap;
+    max-height: unset;
+  }
+
+  .categories__label-no-active {
+    display: none;
+  }
+
+  .categories__label-is-active {
+    display: block;
+    background-image: url("../img/320/Group\ 4.svg");
+  }
+
+  .categories__label {
+    width: 100%;
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  .categories__span::before {
+    top: 14px;
+  }
+
+  .categories__span::after {
+    top: 18px;
+  }
+
 
   .categories__swiper-button-prev,
   .categories__swiper-button-next,

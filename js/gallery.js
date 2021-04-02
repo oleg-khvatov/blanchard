@@ -14,7 +14,7 @@ const mySwiper1 = new Swiper('.gallery__swiper-container', {
   // Optional parameters
   // loop: true,
   resizeObserver: true,
-  speed: 1500,
+  speed: 1000,
   autoplay: {
     delay: 5000, //задержка
     disableOnInteraction: false, //после взаимодействия с пользователем продолжение автовоспроизведения

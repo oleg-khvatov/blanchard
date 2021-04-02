@@ -3538,7 +3538,7 @@
                 <input class="categories__checkbox visually-hidden" type="checkbox">
                 <span class="categories__span">Архитектура</span>
               </label>
-              <label class="categories__label">
+              <label class="categories__label categories__label-is-active">
                 <input class="categories__checkbox visually-hidden" type="checkbox" checked>
                 <span class="categories__span">Дизайн</span>
               </label>
@@ -3673,15 +3673,9 @@
       <div class="container projects__container">
         <h2 class="title projects__title" id="projects">Проекты</h2>
         <p class="projects__description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское 
-          <span class="projects__tooltip-marker" tabindex="0">i
-            <span class="projects__tooltip-popup">Пример современных тенденций - современная методология разработки</span>
-          </span>&nbsp;обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены 
-          <span class="projects__tooltip-marker" tabindex="0">i
-            <span class="projects__tooltip-popup">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span>
-          </span> исключительно в разрезе маркетинговых и финансовых 
-          <span class="projects__tooltip-marker" tabindex="0">i
-            <span class="projects__tooltip-popup">В стремлении повысить качество</span>
-          </span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
+          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy1">i</span>&nbsp;обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены 
+          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy2">i</span> исключительно в разрезе маркетинговых и финансовых 
+          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy3">i</span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
           <a class="projects__link" href="#!">blanchard&#8209;art.ru/projects/about</a>
         </p>
         <h3 class="projects__partners-title">Партнёры проектов:</h3>
@@ -3733,9 +3727,8 @@
     </section>
 
     <section class="contacts">
-      <div class="container contacts__title-container">
-        <h2 class="title contacts__title" id="contacts">Контакты</h2>
-      </div>
+      <h2 class="title contacts__title" id="contacts">Контакты</h2>
+      
       <div class="contacts__info">
         <div class="contacts__content">
           <h3 class="contacts__name-title">Шоурум №2</h3>
@@ -3828,6 +3821,8 @@
   <script src="js/just-validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="js/focus-visible.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/tippy-bundle.umd.js"></script>
   
   <script src="js/header.js"></script>
   <script src="js/hero.js"></script>

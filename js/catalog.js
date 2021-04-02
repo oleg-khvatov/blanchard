@@ -41,6 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
   $( function() {
     $( ".interval" ).accordion({
       collapsible: true,
+      heightStyle: "content",
     });
   });
   //-----------------------------------------------------------------------------------------------------------

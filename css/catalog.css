@@ -150,14 +150,19 @@
   display: block;
 }
 
+.interval__item:not(:first-child) {
+  margin-top: -1px;
+  
+}
+
 .interval__button {
   display: block;
   position: relative;
   width: 100%;
-  padding: 38px 40px 42px 0;
-  border: none;
+  margin-bottom: -1px;
+  padding: 39px 40px 42px 0;
   border: 1px solid transparent;
-  border-bottom: 1px solid #cacaca;
+  border-bottom-color: #cacaca;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -165,11 +170,12 @@
   color: var(--font-color);
   background-color: transparent;
   cursor: pointer;
-  transition: color .2s ease-in-out;
+  transition-property: color, border-color;
+  transition-duration: .2s;
 }
 
-.interval__button:first-child {
-  border-top: 1px solid #cacaca;
+.interval__item:first-child > .interval__button {
+  border-top-color: #cacaca;
 }
 
 .interval__button::before {
@@ -203,14 +209,24 @@
 
 .interval__button:hover {
   color: var(--focus-color);
+  border-top-color: var(--focus-color);
+  border-bottom-color: var(--focus-color) ;
 }
 
-.interval__button:hover::before {
+.interval__item:first-child > .interval__button:hover,
+.interval__item:first-child > .interval__button:focus {
+  border-top-color: var(--focus-color)
+}
+
+.interval__button:hover::before,
+.interval__button:focus::before {
   background-color: var(--focus-color);
 }
 
 .interval__button:focus {
-  border: 1px solid #7943A4;
+  outline-offset: 7px;
+  outline-width: 2px;
+  outline-color: #7943A4;
 }
 
 .interval__button:active {
@@ -380,7 +396,7 @@
 
   .interval__button {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
     font-size: 18px;
   }
 
