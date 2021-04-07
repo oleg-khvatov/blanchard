@@ -66,48 +66,40 @@ window.addEventListener('resize', () => {
   notmobileSlider();
 });
 
-
-
 //=================== форма чекбоксов <=600 =============================
 function checkBox() {
-  if(window.innerWidth <= 600) {
-    let categoryBtn = document.querySelector('.categories__button');
-    let categoryLabels = document.querySelectorAll('.categories__label');
-  
-    categoryLabels.forEach(function(label){
-      label.classList.add('categories__label-no-active');
-    });
-  
-    categoryBtn.addEventListener('click', function() {
-      this.classList.toggle('categories__button-is-active');
-      categoryLabels.forEach(function(label){
-        label.classList.toggle('categories__label-no-active');
-      });
-    });
+  let categoryBtn = document.querySelector('.categories__button');
+  let categoryLabels = document.querySelectorAll('.categories__label');
 
-    let checkBoxs = document.querySelectorAll('.categories__checkbox');
-    checkBoxs.forEach(function(checkMark) {
-      checkMark.addEventListener('change', function() {
-        if (checkMark.checked) {
-          checkMark.parentNode.classList.add('categories__label-is-active');
-        }else {
-          checkMark.parentNode.classList.remove('categories__label-is-active');
-        };
-      });
+  categoryLabels.forEach(function(label){
+    label.classList.add('categories__label-no-active');
+  });
+
+  categoryBtn.addEventListener('click', function() {
+    this.classList.toggle('categories__button-is-active');
+    categoryLabels.forEach(function(label){
+      label.classList.toggle('categories__label-no-active');
     });
-  
-    // рабочая схема, но с недостатками---------------------------------------------
-    // let form = document.querySelector('.categories__form1');
-    // form.addEventListener('click', function(event) {
-    //   let check = event.target;
-    //   check.classList.toggle('categories__label-is-active');
-    // });
-  };
+  });
+
+  let checkBoxs = document.querySelectorAll('.categories__checkbox');
+  checkBoxs.forEach(function(checkMark) {
+    checkMark.addEventListener('change', function() {
+      if (checkMark.checked) {
+        checkMark.parentNode.classList.add('categories__label-is-active');
+      }else {
+        checkMark.parentNode.classList.remove('categories__label-is-active');
+      };
+    });
+  });
+
+  // рабочая схема, но с недостатками---------------------------------------------
+  // let form = document.querySelector('.categories__form1');
+  // form.addEventListener('click', function(event) {
+  //   let check = event.target;
+  //   check.classList.toggle('categories__label-is-active');
+  // }); 
 };
 
 checkBox();
-window.addEventListener('resize', () => {
-  checkBox();
-});
-
 //========================================================================

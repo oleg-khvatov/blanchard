@@ -321,6 +321,7 @@
   }
 
   .gallery__swiper-container {
+    flex-basis: unset; /*для firefox*/
     width: 100%;
     height: 710px;
   }

@@ -14,9 +14,9 @@ const mySwiper1 = new Swiper('.gallery__swiper-container', {
   // Optional parameters
   // loop: true,
   resizeObserver: true,
-  speed: 1000,
+  speed: 700,
   autoplay: {
-    delay: 5000, //задержка
+    delay: 7000, //задержка
     disableOnInteraction: false, //после взаимодействия с пользователем продолжение автовоспроизведения
   },
   
@@ -28,8 +28,8 @@ const mySwiper1 = new Swiper('.gallery__swiper-container', {
       slidesPerColumn: 1,
       slidesPerGroup: 1,
     },
-    // when window width is >= 600px
-    600: {
+    // when window width is >= 601px
+    601: {
       slidesPerView: 2,
       spaceBetween: 34,
       slidesPerColumn: 2,
