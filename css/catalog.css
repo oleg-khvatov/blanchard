@@ -43,7 +43,7 @@
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
-  outline: none;
+  /* outline: none; */
   cursor: pointer;
   transition-property: border-color, filter;
   transition-duration: .2s;
