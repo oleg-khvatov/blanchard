@@ -13,8 +13,7 @@
 }
 
 .gallery__content {
-  flex-basis: 25%;
-  /* min-width: 280px; */
+  width: 25%;
   min-height: 845px;
   display: flex;
   flex-direction: column;
@@ -125,13 +124,14 @@
 /*---------------------слайдер----------------------------*/
 
 .gallery__swiper-container {
-  flex-basis: 71.8%;
+  width: 71.8%;
   height: 845px;
   margin: 0;
-  padding: 85px 0 5px 0;
+  padding: 85px 0 10px 0;
 }
 
 .gallery__slide {
+  flex-grow: 1;
   height: auto;
 }
 
@@ -279,18 +279,18 @@
 
 /*-----------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
-  .gallery__img {
+  .gallery__img-button {
     max-height: 280px;
   }
 
   .gallery__content {
     min-height: 689px;
-    flex-basis: 30.3%;
+    width: 30.3%;
   }
 
   .gallery__swiper-container {
     height: 689px;
-    flex-basis: 64.3%;
+    width: 64.3%;
   }
   /*----------модальное окно 1024---------*/
   .modal__container {
@@ -321,9 +321,9 @@
   }
 
   .gallery__swiper-container {
-    flex-basis: unset; /*для firefox*/
     width: 100%;
     height: 710px;
+    padding-bottom: 30px;
   }
 
   .gallery__description {
@@ -380,7 +380,7 @@
     padding-bottom: 50px;
   }
 
-  .gallery__img {
+  .gallery__img-button {
     min-height: 367px;
   }
 

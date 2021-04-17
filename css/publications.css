@@ -159,8 +159,6 @@
 
 
 .categories__swiper-container {
-  /* flex-basis: 72%; */
-  /* height: 845px; */
   max-width: 1150px;
   margin: 0;
   padding: 94px 0 5px 0;
@@ -363,6 +361,7 @@
   .categories__form1 {
     flex-wrap: nowrap;
     max-height: unset;
+    margin-bottom: 20px;
   }
 
   .categories__label-no-active {

@@ -3673,9 +3673,9 @@
       <div class="container projects__container">
         <h2 class="title projects__title" id="projects">Проекты</h2>
         <p class="projects__description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское 
-          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy1">i</span>&nbsp;обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены 
-          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy2">i</span> исключительно в разрезе маркетинговых и финансовых 
-          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy3">i</span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
+          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy1"></span>&nbsp;обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены 
+          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy2"></span> исключительно в разрезе маркетинговых и финансовых 
+          <span class="projects__tooltip-marker" role="tooltip" tabindex="0" id="typpy3"></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
           <a class="projects__link" href="#!">blanchard&#8209;art.ru/projects/about</a>
         </p>
         <h3 class="projects__partners-title">Партнёры проектов:</h3>
@@ -3727,29 +3727,33 @@
     </section>
 
     <section class="contacts">
-      <h2 class="title contacts__title" id="contacts">Контакты</h2>
+      <div class="contacts__container">
+        <h2 class="title contacts__title" id="contacts">Контакты</h2>
+      </div>
       
       <div class="contacts__info">
-        <div class="contacts__content">
-          <h3 class="contacts__name-title">Шоурум №2</h3>
-          <address class="contacts__address">Покровский бульвар, дом 24, строение 3</address>
-          <form class="contacts__form" action="mail.php" method="POST" aria-label="Заказать звонок">
-            <input type="hidden" name="admin_email[]" value="smart-beloglinsk@yandex.ru">
-            <input type="hidden" name="form_subject" value="Тема письма">
-            <h3 class="contacts__form-title">Заказать обратный звонок</h3>
-            <input class="contacts__input" type="text" name="name" placeholder="Имя*" data-validate-field="name">
-            <input class="contacts__input contacts__input--tel" type="tel" name="tel" placeholder="Телефон*" data-validate-field="tel">
-            <button class="contacts__button" type="submit">Заказать</button>
-          </form>
-          <h3 class="contacts__title-call">Связаться в один клик</h3>
-          <ul class="contacts__social-list">
-            <li class="contacts__social-item">
-              <a class="contacts__social contacts__social--whatsapp" href="https://www.whatsapp.com/" target="_blank" aria-label="whatsapp"></a>
-            </li>
-            <li class="contacts__social-item">
-              <a class="contacts__social contacts__social--telegram" href="https://telegram.org/" target="_blank" aria-label="telegram"></a>
-            </li>
-          </ul> 
+        <div class="contacts__container contacts__block">
+          <div class="contacts__content">
+            <h3 class="contacts__name-title">Шоурум №2</h3>
+            <address class="contacts__address">Покровский бульвар, дом 24, строение 3</address>
+            <form class="contacts__form" action="mail.php" method="POST" aria-label="Заказать звонок">
+              <input type="hidden" name="admin_email[]" value="smart-beloglinsk@yandex.ru">
+              <input type="hidden" name="form_subject" value="Тема письма">
+              <h3 class="contacts__form-title">Заказать обратный звонок</h3>
+              <input class="contacts__input" type="text" name="name" placeholder="Имя*" data-validate-field="name">
+              <input class="contacts__input contacts__input--tel" type="tel" name="tel" placeholder="Телефон*" data-validate-field="tel">
+              <button class="contacts__button" type="submit">Заказать</button>
+            </form>
+            <h3 class="contacts__title-call">Связаться в один клик</h3>
+            <ul class="contacts__social-list">
+              <li class="contacts__social-item">
+                <a class="contacts__social contacts__social--whatsapp" href="https://www.whatsapp.com/" target="_blank" aria-label="whatsapp"></a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social contacts__social--telegram" href="https://telegram.org/" target="_blank" aria-label="telegram"></a>
+              </li>
+            </ul> 
+          </div>
         </div>
         <div class="contacts__map" id="map"></div>
       </div>

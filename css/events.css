@@ -57,7 +57,7 @@
 }
 
 .events__span {
-  width: 33%;
+  max-width: 160px;
   margin-bottom: 3px;
   margin-left: auto;
   font-size: 12px;
@@ -141,9 +141,9 @@
     margin-right: 27px;
   }
 
-  .events__span {
+  /* .events__span {
     width: 65%;
-  }
+  } */
 
   .events__content {
     min-height: 415px;
